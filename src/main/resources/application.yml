@@ -1,0 +1,60 @@
+server:
+  port: 9900
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    dynamic:
+      primary: mysql
+      datasource:
+        mysql:
+          driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+          url: jdbc:p6spy:mysql://localhost:3306/mp?serverTimezone=CTT&useSSL=false&useUnicode=true&characterEncoding=utf8
+          username: root
+          password:
+        sqlserver:
+          driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+          url: jdbc:p6spy:sqlserver://192.168.0.122:1433;DatabaseName=course
+          username: sa
+          password: 520520
+  aop:
+    proxy-target-class: true
+  servlet:
+    multipart:
+      # 开启 multipart 上传功能
+      enabled: true
+      # 文件写入磁盘的阈值.
+      file-size-threshold: 2KB
+      # 最大文件大小.
+      max-file-size: 30MB
+      # 最大请求大小
+      max-request-size: 20MB
+    http:
+      encoding:
+        charset: UTF-8
+        force: true
+        enabled: true
+
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+file:
+  # 所有通过 REST APIs 上传的文件都将存储在此目录下
+  upload-dir: ./uploads
+  #允许上传的格式
+  upload-allow-file-type: txt,dll,jpg
+
+cors:
+  allowed-origins: http://manage.meisu.com,http://mobile.meisu.com #允许的源服务
+  max-age: 3600 #预检请求的有效期，单位为秒。
+
+
+
+
