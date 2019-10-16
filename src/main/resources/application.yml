@@ -22,13 +22,13 @@ spring:
     proxy-target-class: true
   servlet:
     multipart:
-      # ¿ªÆô multipart ÉÏ´«¹¦ÄÜ
+      # å¼€å¯ multipart ä¸Šä¼ åŠŸèƒ½
       enabled: true
-      # ÎÄ¼şĞ´Èë´ÅÅÌµÄãĞÖµ.
+      # æ–‡ä»¶å†™å…¥ç£ç›˜çš„é˜ˆå€¼.
       file-size-threshold: 2KB
-      # ×î´óÎÄ¼ş´óĞ¡.
+      # æœ€å¤§æ–‡ä»¶å¤§å°.
       max-file-size: 30MB
-      # ×î´óÇëÇó´óĞ¡
+      # æœ€å¤§è¯·æ±‚å¤§å°
       max-request-size: 20MB
     http:
       encoding:
@@ -46,14 +46,14 @@ mybatis-plus:
       logic-not-delete-value: 0
 
 file:
-  # ËùÓĞÍ¨¹ı REST APIs ÉÏ´«µÄÎÄ¼ş¶¼½«´æ´¢ÔÚ´ËÄ¿Â¼ÏÂ
+  # æ‰€æœ‰é€šè¿‡ REST APIs ä¸Šä¼ çš„æ–‡ä»¶éƒ½å°†å­˜å‚¨åœ¨æ­¤ç›®å½•ä¸‹
   upload-dir: ./uploads
-  #ÔÊĞíÉÏ´«µÄ¸ñÊ½
+  #å…è®¸ä¸Šä¼ çš„æ ¼å¼
   upload-allow-file-type: txt,dll,jpg
 
 cors:
-  allowed-origins: http://manage.meisu.com,http://mobile.meisu.com #ÔÊĞíµÄÔ´·şÎñ
-  max-age: 3600 #Ô¤¼ìÇëÇóµÄÓĞĞ§ÆÚ£¬µ¥Î»ÎªÃë¡£
+  allowed-origins: http://manage.meisu.com,http://mobile.meisu.com #å…è®¸çš„æºæœåŠ¡
+  max-age: 3600 #é¢„æ£€è¯·æ±‚çš„æœ‰æ•ˆæœŸï¼Œå•ä½ä¸ºç§’ã€‚
 
 
 
