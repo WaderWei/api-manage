@@ -8,7 +8,7 @@ public interface RB {
 
     int NO_LOGIN = -1;
 
-    int SUCCESS = 1;
+    int SUCCESS = 20000;
 
     int FAIL = 0;
 

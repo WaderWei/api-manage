@@ -1,5 +1,5 @@
 server:
-  port: 9900
+  port: 9905
   servlet:
     context-path: /api
 
@@ -15,7 +15,7 @@ spring:
           password:
         sqlserver:
           driver-class-name: com.p6spy.engine.spy.P6SpyDriver
-          url: jdbc:p6spy:sqlserver://192.168.0.122:1433;DatabaseName=course
+          url: jdbc:p6spy:sqlserver://223.240.65.137:1433;DatabaseName=course
           username: sa
           password: 520520
   aop:
@@ -52,7 +52,7 @@ file:
   upload-allow-file-type: txt,dll,jpg
 
 cors:
-  allowed-origins: http://manage.meisu.com,http://mobile.meisu.com #允许的源服务
+  allowed-origins: http://manage.meisu.com,http://mobile.meisu.com,http://192.168.0.120:9901,http://localhost:9901 #允许的源服务
   max-age: 3600 #预检请求的有效期，单位为秒。
 
 

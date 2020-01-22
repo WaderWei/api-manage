@@ -31,18 +31,15 @@ public class GlobalCorsConfig {
         //2) 是否发送Cookie信息
         config.setAllowCredentials(true);
         //3) 允许的请求方式
-        config.addAllowedMethod("OPTIONS".toLowerCase());
-        config.addAllowedMethod("HEAD".toLowerCase());
-        config.addAllowedMethod("GET".toLowerCase());
-        config.addAllowedMethod("PUT".toLowerCase());
-        config.addAllowedMethod("POST".toLowerCase());
-        config.addAllowedMethod("DELETE".toLowerCase());
-        config.addAllowedMethod("PATCH".toLowerCase());
+        config.addAllowedMethod("OPTIONS");
+        config.addAllowedMethod("HEAD");
+        config.addAllowedMethod("GET");
+        config.addAllowedMethod("PUT");
+        config.addAllowedMethod("POST");
+        config.addAllowedMethod("DELETE");
+        config.addAllowedMethod("PATCH");
         // 4）允许的头信息
-        ArrayList<String> headers = new ArrayList<>();
-        headers.add("X-Token");
-        headers.add("*");
-        config.setAllowedHeaders(headers);
+        config.addAllowedHeader("*");
         // 5）有效时长
         config.setMaxAge(corsProperties.getMaxAge());
 
